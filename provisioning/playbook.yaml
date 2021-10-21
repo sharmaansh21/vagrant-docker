@@ -1,0 +1,10 @@
+---
+- name: vagrant
+  hosts: all
+  connection: local
+  become: true
+  serial: 1
+  gather_facts: true
+  tasks:
+    - name: Update apt cache and upgrade packages
+      apt: upgrade=dist update_cache=yes
