@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
     
         # Configure Docker to allow access to more resources
         docker.privileged = true
-        docker.ports = container['ports']
+        #docker.ports = container['ports']
       end
     
       cntnr.vm.provision "ansible_local" do |ansible|
